@@ -1,0 +1,5 @@
+id: 4rmxgmcykibahub2xnngida2ow8sayjlerfwgcg7nzditen0
+name: sys-openbsd
+main: openbsd.zig
+license: MIT
+description: OS bindings layer for OpenBSD
