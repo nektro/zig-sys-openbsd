@@ -603,6 +603,7 @@ pub const S = struct {
     pub const IFREG = 0o100000;
     pub const IFLNK = 0o120000;
     pub const IFSOCK = 0o140000;
+    pub const IFWHT = 0o160000; //unused
     pub const ISVTX = 0o001000;
 };
 
@@ -752,6 +753,7 @@ pub const DT = enum(u8) {
     REG = 8,
     LNK = 10,
     SOCK = 12,
+    WHT = 14, //unused
 };
 
 pub const SHUT = enum(c_int) {
