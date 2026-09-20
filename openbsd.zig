@@ -782,6 +782,44 @@ pub const PROT = struct {
     pub const EXEC = 0x04;
 };
 
+pub const IPV6 = struct {
+    pub const UNICAST_HOPS = 4;
+    pub const MULTICAST_IF = 9;
+    pub const MULTICAST_HOPS = 10;
+    pub const MULTICAST_LOOP = 11;
+    pub const JOIN_GROUP = 12;
+    pub const LEAVE_GROUP = 13;
+    pub const PORTRANGE = 14;
+    pub const CHECKSUM = 26;
+    pub const V6ONLY = 27;
+    pub const RTHDRDSTOPTS = 35;
+    pub const RECVPKTINFO = 36;
+    pub const RECVHOPLIMIT = 37;
+    pub const RECVRTHDR = 38;
+    pub const RECVHOPOPTS = 39;
+    pub const RECVDSTOPTS = 40;
+    pub const USE_MIN_MTU = 42;
+    pub const RECVPATHMTU = 43;
+    pub const PATHMTU = 44;
+    pub const PKTINFO = 46;
+    pub const HOPLIMIT = 47;
+    pub const NEXTHOP = 48;
+    pub const HOPOPTS = 49;
+    pub const DSTOPTS = 50;
+    pub const RTHDR = 51;
+    pub const AUTH_LEVEL = 53;
+    pub const ESP_TRANS_LEVEL = 54;
+    pub const ESP_NETWORK_LEVEL = 55;
+    pub const RECVTCLASS = 57;
+    pub const AUTOFLOWLABEL = 59;
+    pub const IPCOMP_LEVEL = 60;
+    pub const TCLASS = 61;
+    pub const DONTFRAG = 62;
+    pub const PIPEX = 63;
+    pub const RECVDSTPORT = 64;
+    pub const MINHOPCOUNT = 65;
+};
+
 pub fn pipe2(flag: c_int) ![2]c_int {
     var fildes: [2]c_int = @splat(-1);
     const rc = libc.pipe2(&fildes, flag);
