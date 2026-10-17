@@ -3,3 +3,4 @@ name: sys-openbsd
 main: openbsd.zig
 license: MIT
 description: OS bindings layer for OpenBSD
+translate_c_h: pthread.h
